@@ -23,7 +23,7 @@ configure_file(env_config.cpp.in ${ENV_CONFIG_FILE} @ONLY)
 
 # We create one lib with the C++...
 
-add_library(${PROJECT_NAME}
+add_library(${PROJECT_NAME} STATIC
   bit_allocator.cpp
   config.cpp
   display.cpp
@@ -142,7 +142,7 @@ target_link_libraries(${PROJECT_NAME}
   ${rviz_ADDITIONAL_LIBRARIES}
   ${TinyXML2_LIBRARIES}
   ${X11_X11_LIB}
-  assimp
+  ${ASSIMP_LIBRARIES}
   yaml-cpp
 )
 
@@ -164,6 +164,7 @@ set_target_properties(executable
                       PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 
 install(TARGETS executable ${PROJECT_NAME}
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )

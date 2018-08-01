@@ -28,7 +28,9 @@
  */
 
 #include <stdio.h>
+#ifndef WIN32
 #include <sys/time.h>
+#endif
 
 // This is a simple speed test to compare suppressing a signal/slot
 // emission by one of two methods:
@@ -44,9 +46,13 @@
 
 double now()
 {
+#ifndef WIN32
   struct timeval tv;
   gettimeofday( &tv, NULL );
   return double(tv.tv_sec) + double(tv.tv_usec) / 1000000.0;
+#else
+  return 0;
+#endif
 }
 
 int main( int argc, char **argv )
