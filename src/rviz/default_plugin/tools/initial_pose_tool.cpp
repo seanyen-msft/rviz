@@ -36,6 +36,11 @@
 
 #include "rviz/default_plugin/tools/initial_pose_tool.h"
 
+#ifdef WIN32
+#define _USE_MATH_DEFINES
+#include <math.h>
+#endif
+
 namespace rviz
 {
 

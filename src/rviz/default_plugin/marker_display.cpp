@@ -277,8 +277,8 @@ void MarkerDisplay::incomingMarker( const visualization_msgs::Marker::ConstPtr& 
 void MarkerDisplay::failedMarker(const ros::MessageEvent<visualization_msgs::Marker>& marker_evt, tf::FilterFailureReason reason)
 {
   visualization_msgs::Marker::ConstPtr marker = marker_evt.getConstMessage();
-  if (marker->action == visualization_msgs::Marker::DELETE ||
-      marker->action == 3)  // TODO: visualization_msgs::Marker::DELETEALL when message changes in a future version of ROS
+  if (marker->action == visualization_msgs::Marker::MK_DELETE ||
+      marker->action == 3)  // TODO: visualization_msgs::Marker::MK_DELETEALL when message changes in a future version of ROS
   {
     return this->processMessage(marker);
   }
@@ -332,15 +332,15 @@ void MarkerDisplay::processMessage( const visualization_msgs::Marker::ConstPtr& 
 
   switch ( message->action )
   {
-  case visualization_msgs::Marker::ADD:
+  case visualization_msgs::Marker::MK_ADD:
     processAdd( message );
     break;
 
-  case visualization_msgs::Marker::DELETE:
+  case visualization_msgs::Marker::MK_DELETE:
     processDelete( message );
     break;
 
-  case 3: // TODO: visualization_msgs::Marker::DELETEALL when message changes in a future version of ROS
+  case 3: // TODO: visualization_msgs::Marker::MK_DELETEALL when message changes in a future version of ROS
     deleteAllMarkers();
     break;
 
