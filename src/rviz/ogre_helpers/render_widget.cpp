@@ -127,6 +127,7 @@ void RenderWidget::resizeEvent(QResizeEvent *e)
     // VisualizationFrame::onSaveImage()) does not work right for
     // window with an odd width, so here I just always force it to be
     // even.
+    render_window_->reposition( this->pos().x(), this->pos().y() );
     render_window_->resize( width() + (width() % 2), height() );
     render_window_->windowMovedOrResized();
   }
