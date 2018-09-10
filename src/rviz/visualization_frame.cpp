@@ -695,7 +695,9 @@ void VisualizationFrame::markRecentConfig( const std::string& path )
 
 void VisualizationFrame::loadDisplayConfig( const QString& qpath )
 {
-  std::string path = qpath.toStdString();
+  boost::filesystem::path displayConfig = getPackagePath(qpath);
+
+  std::string path = displayConfig.string();
   std::string actual_load_path = path;
   if( !fs::exists( path ) || fs::is_directory( path ) || fs::is_empty( path ))
   {

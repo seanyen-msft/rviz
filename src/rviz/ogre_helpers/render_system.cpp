@@ -166,7 +166,13 @@ void RenderSystem::setupDummyWindowId()
 
 void RenderSystem::loadOgrePlugins()
 {
-  std::string plugin_prefix = get_ogre_plugin_path() + "/";
+  std::string plugin_prefix = "";
+
+#ifdef Q_OS_WIN32
+  // ogre on Windows expects shared library resolution via LoadLibrary
+#else
+  plugin_prefix = get_ogre_plugin_path() + "/";
+#endif
 #ifdef Q_OS_MAC
   plugin_prefix += "lib";
 #endif
