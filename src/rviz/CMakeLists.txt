@@ -23,7 +23,7 @@ configure_file(env_config.cpp.in ${ENV_CONFIG_FILE} @ONLY)
 
 # We create one lib with the C++...
 
-add_library(${PROJECT_NAME} STATIC
+add_library(${PROJECT_NAME} SHARED
   bit_allocator.cpp
   config.cpp
   display.cpp
@@ -129,6 +129,11 @@ add_library(${PROJECT_NAME} STATIC
   ${ENV_CONFIG_FILE}
 )
 
+set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE) 
+
+include(GenerateExportHeader)
+generate_export_header(${PROJECT_NAME})
+
 if(NOT WIN32)
   set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
@@ -165,7 +170,7 @@ set_target_properties(executable
 
 install(TARGETS executable ${PROJECT_NAME}
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
 install(DIRECTORY ./

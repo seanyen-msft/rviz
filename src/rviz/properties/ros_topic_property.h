@@ -28,6 +28,7 @@
  */
 #ifndef ROS_TOPIC_PROPERTY_H
 #define ROS_TOPIC_PROPERTY_H
+#include <rviz_export.h>
 
 #include <string>
 
@@ -36,7 +37,7 @@
 namespace rviz
 {
 
-class RosTopicProperty: public EditableEnumProperty
+class RVIZ_EXPORT RosTopicProperty: public EditableEnumProperty
 {
 Q_OBJECT
 public:

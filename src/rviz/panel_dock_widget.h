@@ -34,6 +34,7 @@
 
 #include <QDockWidget>
 #include <QLabel>
+#include <rviz_export.h>
 
 namespace rviz
 {
@@ -43,7 +44,7 @@ namespace rviz
  * Use setContentWidget() instead of QDockWidget::setWidget() if you
  * want the PanelDockWidget to be destroyed when the content widget is
  * destroyed. */
-class PanelDockWidget: public QDockWidget
+class RVIZ_EXPORT PanelDockWidget: public QDockWidget
 {
 Q_OBJECT
 public:

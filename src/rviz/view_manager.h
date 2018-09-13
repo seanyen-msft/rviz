@@ -32,6 +32,7 @@
 #include <QList>
 #include <QObject>
 #include <QStringList>
+#include <rviz_export.h>
 
 #include "rviz/pluginlib_factory.h"
 #include "rviz/view_controller.h"
@@ -49,7 +50,7 @@ class PropertyTreeModel;
 class ViewController;
 class ViewControllerContainer;
 
-class ViewManager: public QObject
+class RVIZ_EXPORT ViewManager: public QObject
 {
 Q_OBJECT
 public:

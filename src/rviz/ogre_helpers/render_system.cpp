@@ -40,6 +40,7 @@
 #include <GL/glx.h>
 #endif
 
+
 // X.h #defines CursorShape to be "0".  Qt uses CursorShape in normal
 // C++ way.  This wasn't an issue until ogre_logging.h (below)
 // introduced a #include of <QString>.
@@ -110,7 +111,8 @@ void RenderSystem::forceNoStereo()
 }
 
 RenderSystem::RenderSystem()
-: ogre_overlay_system_(NULL)
+:ogre_overlay_system_(NULL)
+, ogre_root_(NULL)
 , stereo_supported_(false)
 {
   OgreLogging::configureLogging();
