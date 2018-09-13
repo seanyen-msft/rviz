@@ -29,6 +29,8 @@
 #ifndef PROPERTY_MODEL_H
 #define PROPERTY_MODEL_H
 
+#include "rviz/macros.h"
+
 #include <QAbstractItemModel>
 
 namespace rviz
@@ -36,7 +38,7 @@ namespace rviz
 
 class Property;
 
-class PropertyTreeModel: public QAbstractItemModel
+class RVIZ_DECL PropertyTreeModel: public QAbstractItemModel
 {
 Q_OBJECT
 public:

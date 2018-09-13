@@ -29,6 +29,8 @@
 #ifndef SPLITTER_HANDLE_H
 #define SPLITTER_HANDLE_H
 
+#include "rviz/macros.h"
+
 #include <QWidget>
 
 class QTreeView;
@@ -40,7 +42,7 @@ namespace rviz
  * column separator adjustment for a two-column QTreeView via mouse
  * drags.  Shows splitter cursor when mouse hovers over it.  Uses
  * event filtering to catch resize events for the parent. */
-class SplitterHandle: public QWidget
+class RVIZ_DECL SplitterHandle: public QWidget
 {
 Q_OBJECT
 public:

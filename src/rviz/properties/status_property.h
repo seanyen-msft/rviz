@@ -29,6 +29,8 @@
 #ifndef STATUSPROPERTY_H
 #define STATUSPROPERTY_H
 
+#include "rviz/macros.h"
+
 #include "rviz/properties/property.h"
 
 #include <QIcon>
@@ -36,7 +38,7 @@
 namespace rviz
 {
 
-class StatusProperty: public Property
+class RVIZ_DECL StatusProperty: public Property
 {
 Q_OBJECT
 public:

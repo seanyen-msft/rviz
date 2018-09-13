@@ -29,6 +29,8 @@
 #ifndef VECTOR_PROPERTY_H
 #define VECTOR_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include <OgreVector3.h>
 
 #include "rviz/properties/property.h"
@@ -36,7 +38,7 @@
 namespace rviz
 {
 
-class VectorProperty: public Property
+class RVIZ_DECL VectorProperty: public Property
 {
 Q_OBJECT
 public:

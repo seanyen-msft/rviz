@@ -30,6 +30,8 @@
 #ifndef RVIZ_ROBOT_JOINT_H
 #define RVIZ_ROBOT_JOINT_H
 
+#include "rviz/macros.h"
+
 #include <string>
 #include <map>
 
@@ -81,7 +83,7 @@ class StringProperty;
  * \struct RobotJoint
  * \brief Contains any data we need from a joint in the robot.
  */
-class RobotJoint: public QObject
+class RVIZ_DECL RobotJoint: public QObject
 {
 Q_OBJECT
 public:

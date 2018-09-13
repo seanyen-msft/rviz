@@ -30,6 +30,8 @@
 #ifndef RVIZ_ROBOT_LINK_H
 #define RVIZ_ROBOT_LINK_H
 
+#include "rviz/macros.h"
+
 #include <string>
 #include <map>
 
@@ -81,7 +83,7 @@ typedef boost::shared_ptr<RobotLinkSelectionHandler> RobotLinkSelectionHandlerPt
  * \struct RobotLink
  * \brief Contains any data we need from a link in the robot.
  */
-class RobotLink: public QObject
+class RVIZ_DECL RobotLink: public QObject
 {
 Q_OBJECT
 public:

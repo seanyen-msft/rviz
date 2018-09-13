@@ -30,6 +30,8 @@
 #ifndef RVIZ_TIME_PANEL_H
 #define RVIZ_TIME_PANEL_H
 
+#include "rviz/macros.h"
+
 #include "rviz/panel.h"
 #include "ros/time.h"
 
@@ -50,7 +52,7 @@ class Display;
  * \class TimePanel
  *
  */
-class TimePanel: public Panel
+class RVIZ_DECL TimePanel: public Panel
 {
 Q_OBJECT
 public:

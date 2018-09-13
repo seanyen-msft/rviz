@@ -30,6 +30,8 @@
 #ifndef RVIZ_SELECTION_PANEL_H
 #define RVIZ_SELECTION_PANEL_H
 
+#include "rviz/macros.h"
+
 #include "rviz/panel.h"
 
 namespace rviz
@@ -37,7 +39,7 @@ namespace rviz
 
 class PropertyTreeWidget;
 
-class SelectionPanel: public Panel
+class RVIZ_DECL SelectionPanel: public Panel
 {
 Q_OBJECT
 public:

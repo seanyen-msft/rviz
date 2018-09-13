@@ -30,6 +30,8 @@
 #ifndef RVIZ_SCREENSHOT_DIALOG_H
 #define RVIZ_SCREENSHOT_DIALOG_H
 
+#include "rviz/macros.h"
+
 #include <QWidget>
 
 class QPixmap;
@@ -50,7 +52,7 @@ class ScaledImageWidget;
  * half-size view of the screenshot in the dialog with buttons for
  * save/try-again/cancel.
  */
-class ScreenshotDialog: public QWidget
+class RVIZ_DECL ScreenshotDialog: public QWidget
 {
 Q_OBJECT
 public:

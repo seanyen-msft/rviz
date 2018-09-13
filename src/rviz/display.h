@@ -29,6 +29,8 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
+#include "rviz/macros.h"
+
 #include <string>
 
 #ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
@@ -60,7 +62,7 @@ class StatusList;
 class DisplayContext;
 class PanelDockWidget;
 
-class Display: public BoolProperty
+class RVIZ_DECL Display: public BoolProperty
 {
 Q_OBJECT
 public:

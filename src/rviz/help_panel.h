@@ -29,6 +29,8 @@
 #ifndef HELP_PANEL_H
 #define HELP_PANEL_H
 
+#include "rviz/macros.h"
+
 #include <string>
 
 #include "rviz/panel.h"
@@ -38,7 +40,7 @@ class QTextBrowser;
 namespace rviz
 {
 
-class HelpPanel: public Panel
+class RVIZ_DECL HelpPanel: public Panel
 {
 Q_OBJECT
 public:

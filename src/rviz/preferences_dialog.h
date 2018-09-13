@@ -30,6 +30,8 @@
 #ifndef RVIZ_PREFERENCES_DIALOG_H
 #define RVIZ_PREFERENCES_DIALOG_H
 
+#include "rviz/macros.h"
+
 #include <QDialog>
 
 #include "rviz/factory.h"
@@ -42,7 +44,7 @@ namespace rviz
 
 class Preferences;
 
-class PreferencesDialog : public QDialog
+class RVIZ_DECL PreferencesDialog : public QDialog
 {
 Q_OBJECT
 public:

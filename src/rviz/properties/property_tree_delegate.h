@@ -29,12 +29,14 @@
 #ifndef PROPERTY_TREE_DELEGATE_H
 #define PROPERTY_TREE_DELEGATE_H
 
+#include "rviz/macros.h"
+
 #include <QStyledItemDelegate>
 
 namespace rviz
 {
 
-class PropertyTreeDelegate: public QStyledItemDelegate
+class RVIZ_DECL PropertyTreeDelegate: public QStyledItemDelegate
 {
 Q_OBJECT
 public:

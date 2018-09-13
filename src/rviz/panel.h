@@ -29,6 +29,8 @@
 #ifndef RVIZ_PANEL_H
 #define RVIZ_PANEL_H
 
+#include "rviz/macros.h"
+
 #include <QWidget>
 
 #include "rviz/config.h"
@@ -38,7 +40,7 @@ namespace rviz
 
 class VisualizationManager;
 
-class Panel: public QWidget
+class RVIZ_DECL Panel: public QWidget
 {
 Q_OBJECT
 public:

@@ -29,13 +29,15 @@
 #ifndef INT_PROPERTY_H
 #define INT_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include "rviz/properties/property.h"
 
 namespace rviz
 {
 
 /** @brief Property specialized to provide max/min enforcement for integers. */
-class IntProperty: public Property
+class RVIZ_DECL IntProperty: public Property
 {
 Q_OBJECT
 public:

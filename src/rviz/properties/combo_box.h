@@ -29,12 +29,14 @@
 #ifndef COMBO_BOX_H
 #define COMBO_BOX_H
 
+#include "rviz/macros.h"
+
 #include <QComboBox>
 
 namespace rviz
 {
 
-class ComboBox: public QComboBox
+class RVIZ_DECL ComboBox: public QComboBox
 {
 Q_OBJECT
 Q_PROPERTY(QString currentText READ currentText USER true)

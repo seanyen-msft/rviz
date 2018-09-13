@@ -29,12 +29,14 @@
 #ifndef RVIZ_WAIT_FOR_MASTER_DIALOG_H
 #define RVIZ_WAIT_FOR_MASTER_DIALOG_H
 
+#include "rviz/macros.h"
+
 #include <QMessageBox>
 
 namespace rviz
 {
 
-class WaitForMasterDialog: public QMessageBox
+class RVIZ_DECL WaitForMasterDialog: public QMessageBox
 {
 Q_OBJECT
 public:

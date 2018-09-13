@@ -29,12 +29,14 @@
 #ifndef FLOAT_EDIT_H
 #define FLOAT_EDIT_H
 
+#include "rviz/macros.h"
+
 #include <QLineEdit>
 
 namespace rviz
 {
 
-class FloatEdit: public QLineEdit
+class RVIZ_DECL FloatEdit: public QLineEdit
 {
 Q_OBJECT
 Q_PROPERTY( float value READ getValue WRITE setValue USER true)

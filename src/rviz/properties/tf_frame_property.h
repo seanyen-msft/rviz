@@ -29,6 +29,8 @@
 #ifndef TF_FRAME_PROPERTY_H
 #define TF_FRAME_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include <string>
 
 #include "rviz/properties/editable_enum_property.h"
@@ -38,7 +40,7 @@ namespace rviz
 
 class FrameManager;
 
-class TfFrameProperty: public EditableEnumProperty
+class RVIZ_DECL TfFrameProperty: public EditableEnumProperty
 {
 Q_OBJECT
 public:

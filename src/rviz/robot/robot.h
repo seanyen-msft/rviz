@@ -30,6 +30,8 @@
 #ifndef RVIZ_ROBOT_H_
 #define RVIZ_ROBOT_H_
 
+#include "rviz/macros.h"
+
 #include "link_updater.h"
 
 #include <string>
@@ -81,7 +83,7 @@ class DisplayContext;
  * A helper class to draw a representation of a robot, as specified by a URDF.  Can display either the visual models of the robot,
  * or the collision models.
  */
-class Robot : public QObject
+class RVIZ_DECL Robot : public QObject
 {
 Q_OBJECT
 public:

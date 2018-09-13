@@ -29,6 +29,8 @@
 #ifndef STRING_PROPERTY_H
 #define STRING_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include <string>
 
 #include "rviz/properties/property.h"
@@ -37,7 +39,7 @@ namespace rviz
 {
 
 /** @brief Property specialized for string values. */
-class StringProperty: public Property
+class RVIZ_DECL StringProperty: public Property
 {
 Q_OBJECT
 public:

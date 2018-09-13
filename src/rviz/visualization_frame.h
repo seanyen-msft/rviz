@@ -30,6 +30,8 @@
 #ifndef RVIZ_VISUALIZATION_FRAME_H
 #define RVIZ_VISUALIZATION_FRAME_H
 
+#include "rviz/macros.h"
+
 #include <boost/shared_ptr.hpp>
 
 #include <QMainWindow>
@@ -71,7 +73,7 @@ class WidgetGeometryChangeDetector;
  * the top is a toolbar with "Move Camera", "Select", etc.  There is
  * also a menu bar with file/open, etc.
  */
-class VisualizationFrame : public QMainWindow, public WindowManagerInterface
+class RVIZ_DECL VisualizationFrame : public QMainWindow, public WindowManagerInterface
 {
 Q_OBJECT
 public:

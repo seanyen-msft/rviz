@@ -29,6 +29,8 @@
 #ifndef RVIZ_LINE_EDIT_WITH_BUTTON_H
 #define RVIZ_LINE_EDIT_WITH_BUTTON_H
 
+#include "rviz/macros.h"
+
 #include <QLineEdit>
 
 class QPushButton;
@@ -39,7 +41,7 @@ namespace rviz
 /**
  * A QLineEdit with a square button on the right side that says "...".
  */
-class LineEditWithButton: public QLineEdit
+class RVIZ_DECL LineEditWithButton: public QLineEdit
 {
 Q_OBJECT
 public:

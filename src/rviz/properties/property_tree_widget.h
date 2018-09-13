@@ -29,6 +29,8 @@
 #ifndef PROPERTY_TREE_WIDGET_H
 #define PROPERTY_TREE_WIDGET_H
 
+#include "rviz/macros.h"
+
 #include <QTreeView>
 
 #include "rviz/config.h"
@@ -40,7 +42,7 @@ namespace rviz
 class Property;
 class SplitterHandle;
 
-class PropertyTreeWidget: public QTreeView
+class RVIZ_DECL PropertyTreeWidget: public QTreeView
 {
 Q_OBJECT
 public:

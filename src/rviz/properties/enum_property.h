@@ -29,6 +29,8 @@
 #ifndef ENUM_PROPERTY_H
 #define ENUM_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include <QStringList>
 
 #include "rviz/properties/string_property.h"
@@ -44,7 +46,7 @@ namespace rviz
  * option.  The integer returned will be that passed to addOption()
  * for with the string that is currently selected.
  */
-class EnumProperty: public StringProperty
+class RVIZ_DECL EnumProperty: public StringProperty
 {
 Q_OBJECT
 public:

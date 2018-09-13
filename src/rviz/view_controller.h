@@ -30,6 +30,8 @@
 #ifndef RVIZ_VIEW_CONTROLLER_H
 #define RVIZ_VIEW_CONTROLLER_H
 
+#include "rviz/macros.h"
+
 #include <string>
 
 #include <QCursor>
@@ -55,7 +57,7 @@ class ViewportMouseEvent;
 class FloatProperty;
 class BoolProperty;
 
-class ViewController: public Property
+class RVIZ_DECL ViewController: public Property
 {
 Q_OBJECT
 public:

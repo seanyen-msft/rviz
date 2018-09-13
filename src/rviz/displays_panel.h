@@ -30,6 +30,8 @@
 #ifndef RVIZ_DISPLAYS_PANEL_H
 #define RVIZ_DISPLAYS_PANEL_H
 
+#include "rviz/macros.h"
+
 #include <boost/thread/mutex.hpp>
 
 #include <vector>
@@ -53,7 +55,7 @@ class Display;
  * \class DisplaysPanel
  *
  */
-class DisplaysPanel: public Panel
+class RVIZ_DECL DisplaysPanel: public Panel
 {
 Q_OBJECT
 public:

@@ -29,13 +29,15 @@
 #ifndef BOOL_PROPERTY_H
 #define BOOL_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include "rviz/properties/property.h"
 
 namespace rviz
 {
 
 /** @brief Property specialized to provide getter for booleans. */
-class BoolProperty: public Property
+class RVIZ_DECL BoolProperty: public Property
 {
 Q_OBJECT
 public:

@@ -30,6 +30,8 @@
 #ifndef RVIZ_FRAME_MANAGER_H
 #define RVIZ_FRAME_MANAGER_H
 
+#include "rviz/macros.h"
+
 #include <map>
 
 #include <QObject>
@@ -78,7 +80,7 @@ class Display;
  *
  * During one frame update (nominally 33ms), the tf tree stays consistent and queries are cached for speedup.
  */
-class FrameManager: public QObject
+class RVIZ_DECL FrameManager: public QObject
 {
 Q_OBJECT
 public:

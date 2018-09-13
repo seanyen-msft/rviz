@@ -29,12 +29,14 @@
 #ifndef STATUSLIST_H
 #define STATUSLIST_H
 
+#include "rviz/macros.h"
+
 #include "rviz/properties/status_property.h"
 
 namespace rviz
 {
 
-class StatusList: public StatusProperty
+class RVIZ_DECL StatusList: public StatusProperty
 {
 Q_OBJECT
 public:

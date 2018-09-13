@@ -29,6 +29,8 @@
 #ifndef FAILED_PANEL_H
 #define FAILED_PANEL_H
 
+#include "rviz/macros.h"
+
 #include <memory>
 
 #include "rviz/panel.h"
@@ -36,7 +38,7 @@
 namespace rviz
 {
 
-class FailedPanel: public Panel
+class RVIZ_DECL FailedPanel: public Panel
 {
 Q_OBJECT
 public:

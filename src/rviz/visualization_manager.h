@@ -31,6 +31,8 @@
 #ifndef RVIZ_VISUALIZATION_MANAGER_H_
 #define RVIZ_VISUALIZATION_MANAGER_H_
 
+#include "rviz/macros.h"
+
 #include <deque>
 
 #include <ros/time.h>
@@ -97,7 +99,7 @@ class VisualizationManagerPrivate;
  * The "protected" members should probably all be "private", as
  * VisualizationManager is not intended to be subclassed.
  */
-class VisualizationManager: public DisplayContext
+class RVIZ_DECL VisualizationManager: public DisplayContext
 {
 Q_OBJECT
 public:

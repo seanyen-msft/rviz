@@ -30,6 +30,8 @@
 #ifndef RVIZ_SPLASH_SCREEN_H
 #define RVIZ_SPLASH_SCREEN_H
 
+#include "rviz/macros.h"
+
 #include <QSplashScreen>
 
 
@@ -38,7 +40,7 @@ class QPainter;
 namespace rviz
 {
 
-class SplashScreen: public QSplashScreen
+class RVIZ_DECL SplashScreen: public QSplashScreen
 {
 Q_OBJECT
 public:

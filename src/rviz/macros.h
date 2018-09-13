@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012, Willow Garage, Inc.
+ * Copyright (c) 2009, Willow Garage, Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -27,44 +27,21 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef RVIZ_SCALED_IMAGE_WIDGET_H
-#define RVIZ_SCALED_IMAGE_WIDGET_H
+#ifndef RVIZ_MACROS_H
+#define RVIZ_MACROS_H
 
-#include "rviz/macros.h"
+#include <ros/macros.h>
 
-#include <QWidget>
+// Import/export for windows dll's and visibility for gcc shared libraries.
 
-namespace rviz
-{
+#ifdef ROS_BUILD_SHARED_LIBS // ros is being built around shared libraries
+  #ifdef rviz_EXPORTS // we are building a shared lib/dll
+    #define RVIZ_DECL ROS_HELPER_EXPORT
+  #else // we are using shared lib/dll
+    #define RVIZ_DECL ROS_HELPER_IMPORT
+  #endif
+#else // ros is being built around static libraries
+  #define RVIZ_DECL
+#endif
 
-/**
- * \brief A widget for showing a scaled version of an image (QPixmap).
- *
- * The scale is just a suggestion, given to Qt by calls to sizeHint(),
- * which returns the image size multiplied by the scale.  The actual
- * rendered size is the largest that fits the image into the current
- * widget size without changing the aspect ratio.  It is always
- * rendered in the center.
- */
-class RVIZ_DECL ScaledImageWidget: public QWidget
-{
-Q_OBJECT
-public:
-  ScaledImageWidget( float scale, QWidget* parent = 0 );
-  virtual ~ScaledImageWidget() {}
-
-  void setImage( QPixmap image );
-
-  virtual QSize sizeHint() const;
-
-protected:
-  virtual void paintEvent( QPaintEvent* event );
-
-private:
-  QPixmap image_;
-  float scale_;
-};
-
-} // namespace rviz
-
-#endif // RVIZ_SCALED_IMAGE_WIDGET_H
+#endif // RVIZ_MACROS_H

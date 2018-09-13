@@ -30,6 +30,8 @@
 #ifndef RVIZ_LOADING_DIALOG_H
 #define RVIZ_LOADING_DIALOG_H
 
+#include "rviz/macros.h"
+
 #include <QDialog>
 
 class QLabel;
@@ -37,7 +39,7 @@ class QLabel;
 namespace rviz
 {
 
-class LoadingDialog: public QDialog
+class RVIZ_DECL LoadingDialog: public QDialog
 {
 Q_OBJECT
 public:

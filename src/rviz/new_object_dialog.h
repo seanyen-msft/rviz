@@ -30,6 +30,8 @@
 #ifndef RVIZ_NEW_OBJECT_DIALOG_H
 #define RVIZ_NEW_OBJECT_DIALOG_H
 
+#include "rviz/macros.h"
+
 #include <QDialog>
 
 #include "rviz/factory.h"
@@ -44,7 +46,7 @@ class QLabel;
 namespace rviz
 {
 
-class NewObjectDialog : public QDialog
+class RVIZ_DECL NewObjectDialog : public QDialog
 {
 Q_OBJECT
 public:

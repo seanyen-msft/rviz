@@ -30,6 +30,8 @@
 #ifndef RVIZ_DISPLAY_GROUP_VISIBILITY_PROPERTY_H_
 #define RVIZ_DISPLAY_GROUP_VISIBILITY_PROPERTY_H_
 
+#include "rviz/macros.h"
+
 #include "display_visibility_property.h"
 
 #include <stdint.h>
@@ -55,7 +57,7 @@ class DisplayVisibilityProperty;
  * Manages the visibility of all displays in a display group
  * by switching one bit in Ogre's visibility mask.
  */
-class DisplayGroupVisibilityProperty: public DisplayVisibilityProperty
+class RVIZ_DECL DisplayGroupVisibilityProperty: public DisplayVisibilityProperty
 {
   Q_OBJECT
 public:

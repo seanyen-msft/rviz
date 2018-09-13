@@ -29,6 +29,8 @@
 #ifndef DISPLAY_CONTEXT_H
 #define DISPLAY_CONTEXT_H
 
+#include "rviz/macros.h"
+
 #include <cstdint> // for uint64_t
 #include <memory>
 
@@ -79,7 +81,7 @@ class WindowManagerInterface;
  * tests by enabling small mock objects to take the place of the large
  * VisualizationManager implementation class.  It also serves to
  * define a narrower, more maintainable API for Display plugins. */
-class DisplayContext: public QObject
+class RVIZ_DECL DisplayContext: public QObject
 {
 Q_OBJECT
 public:

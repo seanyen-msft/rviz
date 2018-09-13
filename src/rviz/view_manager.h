@@ -29,6 +29,8 @@
 #ifndef VIEW_MANAGER_H
 #define VIEW_MANAGER_H
 
+#include "rviz/macros.h"
+
 #include <QList>
 #include <QObject>
 #include <QStringList>
@@ -49,7 +51,7 @@ class PropertyTreeModel;
 class ViewController;
 class ViewControllerContainer;
 
-class ViewManager: public QObject
+class RVIZ_DECL ViewManager: public QObject
 {
 Q_OBJECT
 public:
@@ -141,7 +143,7 @@ private:
 /** @brief Container property for ViewControllers which gets the
  * drag/drop right for the funky way Current-View is always the first
  * entry. */
-class ViewControllerContainer: public Property
+class RVIZ_DECL ViewControllerContainer: public Property
 {
 Q_OBJECT
 public:

@@ -30,6 +30,8 @@
 #ifndef RVIZ_RENDER_PANEL_H
 #define RVIZ_RENDER_PANEL_H
 
+#include "rviz/macros.h"
+
 #include "ogre_helpers/qt_ogre_render_window.h"
 
 #ifndef Q_MOC_RUN
@@ -72,7 +74,7 @@ class ViewController;
  * the DisplayContext (which further forwards them to the active
  * Tool, etc.)
  */
-class RenderPanel: public QtOgreRenderWindow, public Ogre::SceneManager::Listener
+class RVIZ_DECL RenderPanel: public QtOgreRenderWindow, public Ogre::SceneManager::Listener
 {
 Q_OBJECT
 public:

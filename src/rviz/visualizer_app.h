@@ -29,6 +29,8 @@
 #ifndef RVIZ_VISUALIZER_APP_H
 #define RVIZ_VISUALIZER_APP_H
 
+#include "rviz/macros.h"
+
 #include <QApplication>
 #include <QObject>
 
@@ -43,7 +45,7 @@ namespace rviz
 
 class VisualizationFrame;
 
-class VisualizerApp: public QObject
+class RVIZ_DECL VisualizerApp: public QObject
 {
 Q_OBJECT
 public:

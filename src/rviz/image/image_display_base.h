@@ -29,6 +29,8 @@
 #ifndef IMAGE_DISPLAY_BASE_H
 #define IMAGE_DISPLAY_BASE_H
 
+#include "rviz/macros.h"
+
 #include <QObject>
 
 #ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
@@ -57,7 +59,7 @@ namespace rviz
  * it handles subscribing and unsubscribing when the display is
  * enabled or disabled.  */
 
-class ImageDisplayBase : public Display
+class RVIZ_DECL ImageDisplayBase : public Display
 {
 Q_OBJECT
 public:

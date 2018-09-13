@@ -29,13 +29,15 @@
 #ifndef WIDGET_GEOMETRY_CHANGE_DETECTOR_H
 #define WIDGET_GEOMETRY_CHANGE_DETECTOR_H
 
+#include "rviz/macros.h"
+
 #include <QObject>
 
 namespace rviz
 {
 
 /** @brief Utility class for watching for events which indicate that widget geometry has changed. */
-class WidgetGeometryChangeDetector: public QObject
+class RVIZ_DECL WidgetGeometryChangeDetector: public QObject
 {
 Q_OBJECT
 public:

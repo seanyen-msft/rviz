@@ -30,6 +30,8 @@
 #ifndef RVIZ_TOOL_PROPERTIES_PANEL_H
 #define RVIZ_TOOL_PROPERTIES_PANEL_H
 
+#include "rviz/macros.h"
+
 #include "rviz/panel.h"
 
 namespace rviz
@@ -40,7 +42,7 @@ class PropertyTreeWidget;
 
 /** A place to edit properties of all of the Tools.
  */
-class ToolPropertiesPanel: public Panel
+class RVIZ_DECL ToolPropertiesPanel: public Panel
 {
 Q_OBJECT
 public:

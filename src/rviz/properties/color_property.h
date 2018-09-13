@@ -29,6 +29,8 @@
 #ifndef COLOR_PROPERTY_H
 #define COLOR_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include <QColor>
 
 #include "rviz/properties/parse_color.h"
@@ -38,7 +40,7 @@
 namespace rviz
 {
 
-class ColorProperty: public Property
+class RVIZ_DECL ColorProperty: public Property
 {
 Q_OBJECT
 public:

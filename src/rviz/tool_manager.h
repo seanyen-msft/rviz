@@ -29,6 +29,8 @@
 #ifndef TOOL_MANAGER_H
 #define TOOL_MANAGER_H
 
+#include "rviz/macros.h"
+
 #include <QList>
 #include <QObject>
 #include <QStringList>
@@ -44,7 +46,7 @@ class DisplayContext;
 class PropertyTreeModel;
 class RenderPanel;
 
-class ToolManager: public QObject
+class RVIZ_DECL ToolManager: public QObject
 {
 Q_OBJECT
 public:

@@ -30,6 +30,8 @@
 #ifndef RVIZ_SELECTION_MANAGER_H
 #define RVIZ_SELECTION_MANAGER_H
 
+#include "rviz/macros.h"
+
 #include <map>
 
 #include <QObject>
@@ -77,7 +79,7 @@ class PropertyTreeModel;
 class ViewportMouseEvent;
 class VisualizationManager;
 
-class SelectionManager: public QObject, public Ogre::MaterialManager::Listener, public Ogre::RenderQueueListener
+class RVIZ_DECL SelectionManager: public QObject, public Ogre::MaterialManager::Listener, public Ogre::RenderQueueListener
 {
 Q_OBJECT
 public:

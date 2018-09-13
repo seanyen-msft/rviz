@@ -29,12 +29,14 @@
 #ifndef EDITABLE_COMBO_BOX_H
 #define EDITABLE_COMBO_BOX_H
 
+#include "rviz/macros.h"
+
 #include "rviz/properties/combo_box.h"
 
 namespace rviz
 {
 
-class EditableComboBox: public ComboBox
+class RVIZ_DECL EditableComboBox: public ComboBox
 {
 Q_OBJECT
 public:

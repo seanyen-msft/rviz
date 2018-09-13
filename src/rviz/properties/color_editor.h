@@ -29,6 +29,8 @@
 #ifndef RVIZ_COLOR_EDITOR_H
 #define RVIZ_COLOR_EDITOR_H
 
+#include "rviz/macros.h"
+
 #include "rviz/properties/line_edit_with_button.h"
 
 namespace rviz
@@ -36,7 +38,7 @@ namespace rviz
 
 class ColorProperty;
 
-class ColorEditor: public LineEditWithButton
+class RVIZ_DECL ColorEditor: public LineEditWithButton
 {
 Q_OBJECT
 public:

@@ -23,7 +23,7 @@ configure_file(env_config.cpp.in ${ENV_CONFIG_FILE} @ONLY)
 
 # We create one lib with the C++...
 
-add_library(${PROJECT_NAME} STATIC
+add_library(${PROJECT_NAME}
   bit_allocator.cpp
   config.cpp
   display.cpp
@@ -145,8 +145,7 @@ target_link_libraries(${PROJECT_NAME}
   ${ASSIMP_LIBRARIES}
   yaml-cpp
 )
-
-
+set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 if(APPLE)
   set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "-undefined dynamic_lookup")
 endif(APPLE)

@@ -29,6 +29,8 @@
 #ifndef QUATERNION_PROPERTY_H
 #define QUATERNION_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include <OgreQuaternion.h>
 
 #include "rviz/properties/property.h"
@@ -36,7 +38,7 @@
 namespace rviz
 {
 
-class QuaternionProperty: public Property
+class RVIZ_DECL QuaternionProperty: public Property
 {
 Q_OBJECT
 public:

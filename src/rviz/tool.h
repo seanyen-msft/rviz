@@ -30,6 +30,8 @@
 #ifndef RVIZ_TOOL_H
 #define RVIZ_TOOL_H
 
+#include "rviz/macros.h"
+
 #include <QString>
 #include <QIcon>
 #include <QCursor>
@@ -52,7 +54,7 @@ class Property;
 class RenderPanel;
 class ViewportMouseEvent;
 
-class Tool : public QObject
+class RVIZ_DECL Tool : public QObject
 {
 Q_OBJECT
 public:

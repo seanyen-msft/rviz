@@ -30,6 +30,8 @@
 #ifndef RVIZ_ADD_DISPLAY_DIALOG_H
 #define RVIZ_ADD_DISPLAY_DIALOG_H
 
+#include "rviz/macros.h"
+
 #include <QDialog>
 #include <QTreeWidget>
 #include <QComboBox>
@@ -61,7 +63,7 @@ struct SelectionData {
   QString datatype;
 };
 
-class AddDisplayDialog : public QDialog
+class RVIZ_DECL AddDisplayDialog : public QDialog
 {
 Q_OBJECT
 public:
@@ -151,7 +153,7 @@ private:
 
 
 /** @brief Widget for selecting a display by display type */
-class DisplayTypeTree : public QTreeWidget {
+class RVIZ_DECL DisplayTypeTree : public QTreeWidget {
 Q_OBJECT
 public:
   DisplayTypeTree();
@@ -166,7 +168,7 @@ private Q_SLOTS:
 };
 
 /** @brief Widget for selecting a display by topic */
-class TopicDisplayWidget : public QWidget {
+class RVIZ_DECL TopicDisplayWidget : public QWidget {
 Q_OBJECT
 public:
   TopicDisplayWidget();
@@ -204,7 +206,7 @@ private:
  * Identical to QComboBox except that when it clicks it emits a signal
  * containing the QTreeWidgetItem that it's given at construction.
  */
-class EmbeddableComboBox : public QComboBox
+class RVIZ_DECL EmbeddableComboBox : public QComboBox
 {
   Q_OBJECT
 public:

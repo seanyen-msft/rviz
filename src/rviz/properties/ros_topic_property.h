@@ -29,6 +29,8 @@
 #ifndef ROS_TOPIC_PROPERTY_H
 #define ROS_TOPIC_PROPERTY_H
 
+#include "rviz/macros.h"
+
 #include <string>
 
 #include "rviz/properties/editable_enum_property.h"
@@ -36,7 +38,7 @@
 namespace rviz
 {
 
-class RosTopicProperty: public EditableEnumProperty
+class RVIZ_DECL RosTopicProperty: public EditableEnumProperty
 {
 Q_OBJECT
 public:

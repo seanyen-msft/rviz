@@ -30,6 +30,8 @@
 #ifndef RVIZ_DISPLAY_VISIBILITY_PROPERTY_H_
 #define RVIZ_DISPLAY_VISIBILITY_PROPERTY_H_
 
+#include "rviz/macros.h"
+
 #include <stdint.h>
 
 #include <map>
@@ -53,7 +55,7 @@ class DisplayVisibilityProperty;
 /*
  * @brief Changes one visibility bit of a given Display
  */
-class DisplayVisibilityProperty : public BoolProperty
+class RVIZ_DECL DisplayVisibilityProperty : public BoolProperty
 {
 Q_OBJECT
 public:

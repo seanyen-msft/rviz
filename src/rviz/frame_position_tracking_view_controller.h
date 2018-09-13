@@ -30,6 +30,8 @@
 #ifndef RVIZ_FRAME_POSITION_TRACKING_VIEW_CONTROLLER_H
 #define RVIZ_FRAME_POSITION_TRACKING_VIEW_CONTROLLER_H
 
+#include "rviz/macros.h"
+
 #include <OgreQuaternion.h>
 #include <OgreVector3.h>
 
@@ -42,7 +44,7 @@ class TfFrameProperty;
 
 /** @brief Base class of ViewControllers which have a "Target Frame"
  * which is a TF frame whose position they track. */
-class FramePositionTrackingViewController: public ViewController
+class RVIZ_DECL FramePositionTrackingViewController: public ViewController
 {
 Q_OBJECT
 public:

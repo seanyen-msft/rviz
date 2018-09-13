@@ -30,6 +30,8 @@
 #ifndef RVIZ_VIEWS_PANEL_H
 #define RVIZ_VIEWS_PANEL_H
 
+#include "rviz/macros.h"
+
 #include "rviz/panel.h"
 
 class QComboBox;
@@ -46,7 +48,7 @@ class PropertyTreeWidget;
  * @brief Panel for choosing the view controller and saving and restoring
  * viewpoints.
  */
-class ViewsPanel: public Panel
+class RVIZ_DECL ViewsPanel: public Panel
 {
 Q_OBJECT
 public:

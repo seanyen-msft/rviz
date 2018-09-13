@@ -29,6 +29,8 @@
 #ifndef RVIZ_PROPERTY_TREE_WITH_HELP_H
 #define RVIZ_PROPERTY_TREE_WITH_HELP_H
 
+#include "rviz/macros.h"
+
 #include <QSplitter>
 
 #include "rviz/config.h"
@@ -42,7 +44,7 @@ class Property;
 class PropertyTreeWidget;
 
 /** A PropertyTreeWidget with built-in help info display. */
-class PropertyTreeWithHelp: public QSplitter
+class RVIZ_DECL PropertyTreeWithHelp: public QSplitter
 {
 Q_OBJECT
 public:
