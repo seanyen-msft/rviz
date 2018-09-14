@@ -132,7 +132,7 @@ add_library(${PROJECT_NAME} SHARED
 set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 include(GenerateExportHeader)
-generate_export_header(${PROJECT_NAME} EXPORT_FILE_NAME ${CATKIN_DEVEL_PREFIX}/include/rviz/${PROJECT_NAME}_export.h)
+generate_export_header(${PROJECT_NAME} EXPORT_FILE_NAME ${CATKIN_DEVEL_PREFIX}/include/${PROJECT_NAME}/${PROJECT_NAME}_export.h)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CATKIN_DEVEL_PREFIX}/include)
 
 if(NOT WIN32)
@@ -179,7 +179,7 @@ install(DIRECTORY ./
   FILES_MATCHING PATTERN "*.h")
 
 install(DIRECTORY
-  ${CATKIN_DEVEL_PREFIX}/include/
+  ${CATKIN_DEVEL_PREFIX}/include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h")
 
