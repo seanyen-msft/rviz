@@ -32,7 +32,7 @@
 #include <QList>
 #include <QObject>
 #include <QStringList>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include "rviz/pluginlib_factory.h"
 #include "rviz/tool.h"

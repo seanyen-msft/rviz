@@ -34,7 +34,7 @@
 #include <QObject>
 #include <QIcon>
 #include <QVariant>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include "rviz/config.h"
 

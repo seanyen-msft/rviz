@@ -34,7 +34,7 @@
 #include <deque>
 
 #include <ros/time.h>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include "rviz/bit_allocator.h"
 #include "rviz/config.h"

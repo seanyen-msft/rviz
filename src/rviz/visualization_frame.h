@@ -34,7 +34,7 @@
 
 #include <QMainWindow>
 #include <QList>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include <string>
 #include <deque>

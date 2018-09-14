@@ -28,7 +28,7 @@
  */
 #ifndef ROS_TOPIC_PROPERTY_H
 #define ROS_TOPIC_PROPERTY_H
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include <string>
 

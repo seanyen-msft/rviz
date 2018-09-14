@@ -34,7 +34,7 @@
 #include <QIcon>
 #include <QCursor>
 #include <QObject>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 #include "rviz/config.h"
 
 class QMouseEvent;

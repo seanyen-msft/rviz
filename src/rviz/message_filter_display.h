@@ -28,7 +28,7 @@
  */
 #ifndef MESSAGE_FILTER_DISPLAY_H
 #define MESSAGE_FILTER_DISPLAY_H
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #ifndef Q_MOC_RUN
 #include <OgreSceneManager.h>
