@@ -33,7 +33,7 @@
 #include <string>
 
 #include <QCursor>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include "rviz/properties/property.h"
 

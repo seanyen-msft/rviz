@@ -30,7 +30,7 @@
 #define VECTOR_PROPERTY_H
 
 #include <OgreVector3.h>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include "rviz/properties/property.h"
 

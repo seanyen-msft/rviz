@@ -31,7 +31,7 @@
 
 #include <QApplication>
 #include <QObject>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
 # include <ros/ros.h>

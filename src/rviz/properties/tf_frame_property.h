@@ -30,7 +30,7 @@
 #define TF_FRAME_PROPERTY_H
 
 #include <string>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include "rviz/properties/editable_enum_property.h"
 

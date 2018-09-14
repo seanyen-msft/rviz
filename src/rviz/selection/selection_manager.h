@@ -33,7 +33,7 @@
 #include <map>
 
 #include <QObject>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #include "forwards.h"
 #include "selection_handler.h"

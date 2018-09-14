@@ -34,7 +34,7 @@
 
 #include <QDockWidget>
 #include <QLabel>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 namespace rviz
 {

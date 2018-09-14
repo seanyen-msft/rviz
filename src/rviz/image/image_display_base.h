@@ -30,7 +30,7 @@
 #define IMAGE_DISPLAY_BASE_H
 
 #include <QObject>
-#include <rviz_export.h>
+#include <rviz/rviz_export.h>
 
 #ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
 # include <message_filters/subscriber.h>
