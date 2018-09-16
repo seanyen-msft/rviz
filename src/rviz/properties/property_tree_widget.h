@@ -31,6 +31,7 @@
 
 #include <QTreeView>
 
+#include <rviz/rviz_export.h>
 #include "rviz/config.h"
 #include "rviz/properties/property_tree_model.h"
 
@@ -40,7 +41,7 @@ namespace rviz
 class Property;
 class SplitterHandle;
 
-class PropertyTreeWidget: public QTreeView
+class RVIZ_EXPORT PropertyTreeWidget: public QTreeView
 {
 Q_OBJECT
 public:
