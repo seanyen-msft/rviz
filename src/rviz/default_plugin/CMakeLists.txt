@@ -81,6 +81,7 @@ target_link_libraries(${rviz_DEFAULT_PLUGIN_LIBRARY_TARGET_NAME}
   ${OGRE_OV_LIBRARIES_ABS}
   ${QT_LIBRARIES}
 )
+set_target_properties(${rviz_DEFAULT_PLUGIN_LIBRARY_TARGET_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 target_include_directories(${rviz_DEFAULT_PLUGIN_LIBRARY_TARGET_NAME} PUBLIC ${CATKIN_DEVEL_PREFIX}/include)
 
@@ -92,7 +93,7 @@ install(TARGETS ${rviz_DEFAULT_PLUGIN_LIBRARY_TARGET_NAME}
 # Generate to the devel space so the extras file can include it from the devel space.
 file(GENERATE
   OUTPUT "${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake/default_plugin_location.cmake"
-  CONTENT "set(rviz_DEFAULT_PLUGIN_FILE_NAME $<TARGET_FILE_NAME:${rviz_DEFAULT_PLUGIN_LIBRARY_TARGET_NAME}>)"
+  CONTENT "set(rviz_DEFAULT_PLUGIN_FILE_NAME $<TARGET_LINKER_FILE_NAME:${rviz_DEFAULT_PLUGIN_LIBRARY_TARGET_NAME}>)"
 )
 # Install from the devel space to the install space.
 install(FILES "${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}/cmake/default_plugin_location.cmake"
