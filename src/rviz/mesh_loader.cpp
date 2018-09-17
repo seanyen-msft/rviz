@@ -598,7 +598,7 @@ float getMeshUnitRescale(const std::string& resource_path)
 
   // Use the resource retriever to get the data.
   const char * data = reinterpret_cast<const char * > (res.data.get());
-  xmlDoc.Parse(data);
+  xmlDoc.Parse(data, res.size);
 
   // Find the appropriate element if it exists
   if(!xmlDoc.Error())
@@ -612,10 +612,17 @@ float getMeshUnitRescale(const std::string& resource_path)
         tinyxml2::XMLElement *unitXml = assetXml->FirstChildElement("unit");
         if (unitXml && unitXml->Attribute("meter"))
         {
+          // Some files use a double sized value for scale, which does not process correctly on Windows 
+          double specifiedScale = 1.0;
+
           // Failing to convert leaves unit_scale as the default.
-          if(unitXml->QueryFloatAttribute("meter", &unit_scale) != 0)
+          if(unitXml->QueryDoubleAttribute("meter", &specifiedScale) != 0)
+          {
             ROS_WARN_STREAM("getMeshUnitRescale::Failed to convert unit element meter attribute to determine scaling. unit element: "
                             << unitXml->GetText());
+          }
+
+          unit_scale = (float)specifiedScale;
         }
       }
     }

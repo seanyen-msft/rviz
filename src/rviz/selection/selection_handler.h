@@ -32,6 +32,7 @@
 
 #include <vector>
 #include <set>
+#include <rviz/rviz_export.h>
 
 #ifndef Q_MOC_RUN
 #include <boost/shared_ptr.hpp>
@@ -61,7 +62,7 @@ class ViewportMouseEvent;
 
 typedef std::vector<Ogre::AxisAlignedBox> V_AABB;
 
-class SelectionHandler
+class RVIZ_EXPORT SelectionHandler
 {
 public:
   SelectionHandler( DisplayContext* context );

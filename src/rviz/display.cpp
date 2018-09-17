@@ -55,6 +55,7 @@ namespace rviz
 
 Display::Display()
   : context_( 0 )
+  , scene_manager_( NULL )
   , scene_node_( NULL )
   , status_( 0 )
   , initialized_( false )

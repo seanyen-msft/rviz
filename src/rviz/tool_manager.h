@@ -32,6 +32,7 @@
 #include <QList>
 #include <QObject>
 #include <QStringList>
+#include <rviz/rviz_export.h>
 
 #include "rviz/pluginlib_factory.h"
 #include "rviz/tool.h"
@@ -44,7 +45,7 @@ class DisplayContext;
 class PropertyTreeModel;
 class RenderPanel;
 
-class ToolManager: public QObject
+class RVIZ_EXPORT ToolManager: public QObject
 {
 Q_OBJECT
 public:

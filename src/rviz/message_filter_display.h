@@ -28,6 +28,7 @@
  */
 #ifndef MESSAGE_FILTER_DISPLAY_H
 #define MESSAGE_FILTER_DISPLAY_H
+#include <rviz/rviz_export.h>
 
 #ifndef Q_MOC_RUN
 #include <OgreSceneManager.h>
@@ -49,7 +50,7 @@ namespace rviz
 /** @brief Helper superclass for MessageFilterDisplay, needed because
  * Qt's moc and c++ templates don't work nicely together.  Not
  * intended to be used directly. */
-class _RosTopicDisplay: public Display
+class RVIZ_EXPORT _RosTopicDisplay: public Display
 {
 Q_OBJECT
 public:

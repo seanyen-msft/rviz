@@ -30,6 +30,7 @@
 #define DISPLAY_H
 
 #include <string>
+#include <rviz/rviz_export.h>
 
 #ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
 # include <ros/ros.h>
@@ -60,7 +61,7 @@ class StatusList;
 class DisplayContext;
 class PanelDockWidget;
 
-class Display: public BoolProperty
+class RVIZ_EXPORT Display: public BoolProperty
 {
 Q_OBJECT
 public:

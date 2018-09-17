@@ -29,6 +29,7 @@
 
 #ifndef OGRE_TOOLS_OBJECT_H
 #define OGRE_TOOLS_OBJECT_H
+#include <rviz/rviz_export.h>
 
 namespace Ogre
 {
@@ -46,7 +47,7 @@ namespace rviz
  * \class Object
  * \brief Base class for visible objects, providing a minimal generic interface.
  */
-class Object
+class RVIZ_EXPORT Object
 {
 public:
   /**

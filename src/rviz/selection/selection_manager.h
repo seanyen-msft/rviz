@@ -33,6 +33,7 @@
 #include <map>
 
 #include <QObject>
+#include <rviz/rviz_export.h>
 
 #include "forwards.h"
 #include "selection_handler.h"
@@ -77,7 +78,7 @@ class PropertyTreeModel;
 class ViewportMouseEvent;
 class VisualizationManager;
 
-class SelectionManager: public QObject, public Ogre::MaterialManager::Listener, public Ogre::RenderQueueListener
+class RVIZ_EXPORT SelectionManager: public QObject, public Ogre::MaterialManager::Listener, public Ogre::RenderQueueListener
 {
 Q_OBJECT
 public:

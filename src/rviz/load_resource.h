@@ -33,6 +33,7 @@
 #include <QPixmap>
 #include <QCursor>
 #include <QString>
+#include <boost/filesystem.hpp>
 
 namespace rviz
 {
@@ -40,6 +41,7 @@ namespace rviz
 // Helper functions to load resources based on their resource url,
 // e.g. "package://rviz/icons/package.png",
 // or "file:///home/user/.ros/config.yaml".
+boost::filesystem::path getPackagePath(const QString& url);
 
 /* @brief Try to load the pixmap url from disk or the cache.
  *        In case of a failure, the result will be an empty QPixmap.
