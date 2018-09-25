@@ -164,7 +164,7 @@ public:
     {
       res = retriever_.get(file);
     }
-    catch (resource_retriever::Exception& e)
+    catch (resource_retriever::Exception&)
     {
       return false;
     }
