@@ -597,9 +597,11 @@ void SelectionManager::renderAndUnpack(Ogre::Viewport* viewport, uint32_t pass, 
     scheme << pass;
   }
 
-  if( render( viewport, render_textures_[pass], x1, y1, x2, y2, pixel_boxes_[pass], scheme.str(), texture_size_, texture_size_ ))
+  Ogre::PixelBox& box = pixel_boxes_[pass];
+
+  if( render( viewport, render_textures_[pass], x1, y1, x2, y2, box, scheme.str(), texture_size_, texture_size_ ))
   {
-    unpackColors(pixel_boxes_[pass], pixels);
+    unpackColors(box, pixels);
   }
 }
 
@@ -783,6 +785,9 @@ void SelectionManager::publishDebugImage( const Ogre::PixelBox& pixel_box, const
   int post_pixel_padding = 0;
   switch( pixel_box.format )
   {
+  case Ogre::PF_R8G8B8:
+	  break;
+
   case Ogre::PF_A8R8G8B8:
   case Ogre::PF_X8R8G8B8:
     post_pixel_padding = 1;
