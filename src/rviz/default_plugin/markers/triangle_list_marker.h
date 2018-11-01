@@ -32,6 +32,9 @@
 
 #include <OgreMaterial.h>
 #include <OgreSharedPtr.h>
+#ifdef DELETE
+#undef DELETE
+#endif
 
 #include "rviz/default_plugin/markers/marker_base.h"
 
