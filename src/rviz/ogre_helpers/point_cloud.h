@@ -50,6 +50,9 @@
 #include <OgreRoot.h>
 #include <OgreHardwareBufferManager.h>
 #include <OgreSharedPtr.h>
+#ifdef DELETE
+#undef DELETE
+#endif
 
 #ifndef _WIN32
 # pragma GCC diagnostic pop

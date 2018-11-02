@@ -39,6 +39,9 @@
 #include <boost/unordered_map.hpp>
 
 #include <OgreMovableObject.h>
+#ifdef DELETE
+#undef DELETE
+#endif
 #endif
 
 #include "rviz/selection/forwards.h"

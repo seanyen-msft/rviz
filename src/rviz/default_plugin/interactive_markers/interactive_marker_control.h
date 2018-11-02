@@ -39,6 +39,9 @@
 #include <OgreVector3.h>
 #include <OgreQuaternion.h>
 #include <OgreSceneManager.h>
+#ifdef DELETE
+#undef DELETE
+#endif
 #endif
 
 #include <QCursor>

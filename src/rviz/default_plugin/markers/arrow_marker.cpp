@@ -32,6 +32,9 @@
 #include <OgreSceneNode.h>
 #include <OgreSceneManager.h>
 #include <OgreEntity.h>
+#ifdef DELETE
+#undef DELETE
+#endif
 
 #include "rviz/default_plugin/marker_display.h"
 #include "rviz/default_plugin/markers/marker_selection_handler.h"

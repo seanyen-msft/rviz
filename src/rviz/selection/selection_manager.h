@@ -49,6 +49,9 @@
 #include <OgreMovableObject.h>
 #include <OgreRenderQueueListener.h>
 #include <OgreSharedPtr.h>
+#ifdef DELETE
+#undef DELETE
+#endif
 #endif
 
 #include <vector>
