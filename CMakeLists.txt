@@ -44,7 +44,7 @@ else()
   set(ASSIMP_INCLUDE_DIRS)
 endif()
 
-pkg_check_modules(OGRE_OV OGRE OGRE-Overlay)
+pkg_check_modules(OGRE_OV OGRE OGRE-Overlay OGRE-RTShaderSystem)
 
 # Old versions of OGRE (pre 1.9) included OGRE-Overlay in the main package
 # (i.e. there was no OGRE-Overlay component).  So if the above

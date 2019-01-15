@@ -48,6 +48,7 @@
 #include <OgreSharedPtr.h>
 #include <OgreTechnique.h>
 #include <OgreRectangle2D.h>
+#include <OgreShaderGenerator.h>
 
 #include <sensor_msgs/image_encodings.h>
 #include <sensor_msgs/Image.h>
@@ -163,13 +164,76 @@ void SelectionManager::initialize()
   fallback_pick_material_ = Ogre::MaterialManager::getSingleton().getByName( "rviz/DefaultPickAndDepth" );
   fallback_pick_material_->load();
 
-  fallback_pick_cull_technique_ = fallback_pick_material_->getTechnique( "PickCull" );
-  fallback_black_cull_technique_ = fallback_pick_material_->getTechnique( "BlackCull" );
-  fallback_depth_cull_technique_ = fallback_pick_material_->getTechnique( "DepthCull" );
+  auto shadergen = Ogre::RTShader::ShaderGenerator::getSingletonPtr();
+  bool techniqueCreated = false;
 
-  fallback_pick_technique_ = fallback_pick_material_->getTechnique( "Pick" );
-  fallback_black_technique_ = fallback_pick_material_->getTechnique( "Black" );
-  fallback_depth_technique_ = fallback_pick_material_->getTechnique( "Depth" );
+  techniqueCreated = shadergen->createShaderBasedTechnique(
+    fallback_pick_material_->getName(),
+    "PickCull",
+    "PickCull_",
+    true);
+  if (techniqueCreated)
+  {
+    shadergen->validateMaterial("PickCull_", fallback_pick_material_->getName());
+  }
+
+  techniqueCreated = shadergen->createShaderBasedTechnique(
+    fallback_pick_material_->getName(),
+    "BlackCull",
+    "BlackCull_",
+    true);
+  if (techniqueCreated)
+  {
+    shadergen->validateMaterial("BlackCull_", fallback_pick_material_->getName());
+  }
+
+  techniqueCreated = shadergen->createShaderBasedTechnique(
+    fallback_pick_material_->getName(),
+    "DepthCull",
+    "DepthCull_",
+    true);
+  if (techniqueCreated)
+  {
+    shadergen->validateMaterial("DepthCull_", fallback_pick_material_->getName());
+  }
+
+  techniqueCreated = shadergen->createShaderBasedTechnique(
+    fallback_pick_material_->getName(),
+    "Pick",
+    "Pick_",
+    true);
+  if (techniqueCreated)
+  {
+    shadergen->validateMaterial("Pick_", fallback_pick_material_->getName());
+  }
+
+  techniqueCreated = shadergen->createShaderBasedTechnique(
+    fallback_pick_material_->getName(),
+    "Black",
+    "Black_",
+    true);
+  if (techniqueCreated)
+  {
+    shadergen->validateMaterial("Black_", fallback_pick_material_->getName());
+  }
+
+  techniqueCreated = shadergen->createShaderBasedTechnique(
+    fallback_pick_material_->getName(),
+    "Depth",
+    "Depth_",
+    true);
+  if (techniqueCreated)
+  {
+    shadergen->validateMaterial("Depth_", fallback_pick_material_->getName());
+  }
+
+  fallback_pick_cull_technique_ = fallback_pick_material_->getTechnique( 6 );
+  fallback_black_cull_technique_ = fallback_pick_material_->getTechnique( 7 );
+  fallback_depth_cull_technique_ = fallback_pick_material_->getTechnique( 8 );
+
+  fallback_pick_technique_ = fallback_pick_material_->getTechnique( 9 );
+  fallback_black_technique_ = fallback_pick_material_->getTechnique( 10 );
+  fallback_depth_technique_ = fallback_pick_material_->getTechnique( 11 );
 }
 
 

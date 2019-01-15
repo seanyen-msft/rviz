@@ -1,0 +1,17 @@
+material rviz/Indexed8BitImage
+{
+  technique
+  {
+    pass
+    {
+      vertex_program_ref rviz/glsles/indexed_8bit_image.vert {
+      }
+
+      fragment_program_ref rviz/glsles/indexed_8bit_image.frag
+      {
+        param_named eight_bit_image int 0
+        param_named palette int 1
+      }
+    }
+  }
+}
