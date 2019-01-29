@@ -10,9 +10,6 @@
 #include <urdf/model.h>
 #include "effort_visual.h"
 
-#define _USE_MATH_DEFINES
-#include <math.h>
-
 namespace rviz
 {
 
