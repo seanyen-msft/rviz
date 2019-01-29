@@ -23,7 +23,7 @@ configure_file(env_config.cpp.in ${ENV_CONFIG_FILE} @ONLY)
 
 # We create one lib with the C++...
 
-add_library(${PROJECT_NAME} SHARED
+add_library(${PROJECT_NAME}
   bit_allocator.cpp
   config.cpp
   display.cpp
@@ -128,8 +128,6 @@ add_library(${PROJECT_NAME} SHARED
 
   ${ENV_CONFIG_FILE}
 )
-
-set_target_properties(${PROJECT_NAME} PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 
 include(GenerateExportHeader)
 generate_export_header(${PROJECT_NAME} EXPORT_FILE_NAME ${CATKIN_DEVEL_PREFIX}/include/${PROJECT_NAME}/${PROJECT_NAME}_export.h)
