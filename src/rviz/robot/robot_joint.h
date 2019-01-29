@@ -48,6 +48,7 @@
 #include "rviz/ogre_helpers/object.h"
 #include "rviz/selection/forwards.h"
 
+#include "OgrePrerequisites.h"
 namespace Ogre
 {
 class SceneManager;

@@ -41,6 +41,7 @@
 
 #include <urdf/model.h> // can be replaced later by urdf_model/types.h
 
+#include "OgrePrerequisites.h"
 namespace Ogre
 {
 class SceneManager;

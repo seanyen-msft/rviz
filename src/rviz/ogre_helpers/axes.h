@@ -38,6 +38,7 @@
 
 #include <vector>
 
+#include "OgrePrerequisites.h"
 namespace Ogre
 {
 class SceneManager;

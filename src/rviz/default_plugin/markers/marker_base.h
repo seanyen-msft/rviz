@@ -39,6 +39,7 @@
 
 #include <boost/shared_ptr.hpp>
 
+#include "OgrePrerequisites.h"
 namespace Ogre
 {
 class SceneNode;

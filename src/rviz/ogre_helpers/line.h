@@ -36,6 +36,7 @@
 #include <OgreMaterial.h>
 #include <OgreSharedPtr.h>
 
+#include "OgrePrerequisites.h"
 namespace Ogre
 {
 class SceneManager;

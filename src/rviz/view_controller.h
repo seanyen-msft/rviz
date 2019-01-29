@@ -39,6 +39,7 @@
 
 class QKeyEvent;
 
+#include "OgrePrerequisites.h"
 namespace Ogre
 {
 class Camera;

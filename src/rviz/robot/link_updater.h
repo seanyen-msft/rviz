@@ -33,6 +33,7 @@
 #include <string>
 #include "rviz/properties/status_property.h"
 
+#include "OgrePrerequisites.h"
 namespace Ogre
 {
 class Vector3;

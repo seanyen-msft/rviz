@@ -114,7 +114,7 @@ void ImageView::showEvent( QShowEvent* event )
 
   Ogre::Rectangle2D* rect = new Ogre::Rectangle2D(true);
   rect->setCorners(-1.0f, 1.0f, 1.0f, -1.0f);
-  rect->setMaterial(material->getName());
+  rect->setMaterial(material);
   rect->setRenderQueueGroup(Ogre::RENDER_QUEUE_OVERLAY - 1);
   Ogre::AxisAlignedBox aabb;
   aabb.setInfinite();

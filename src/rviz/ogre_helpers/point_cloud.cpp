@@ -337,7 +337,7 @@ void PointCloud::setRenderMode(RenderMode mode)
   V_PointCloudRenderable::iterator end = renderables_.end();
   for (; it != end; ++it)
   {
-    (*it)->setMaterial(current_material_->getName());
+    (*it)->setMaterial(current_material_);
   }
 
   regenerateAll();
@@ -765,7 +765,11 @@ void PointCloud::setPickColor(const Ogre::ColourValue& color)
 PointCloudRenderablePtr PointCloud::createRenderable( int num_points )
 {
   PointCloudRenderablePtr rend(new PointCloudRenderable(this, num_points, !current_mode_supports_geometry_shader_));
+#if(OGRE_VERSION_MAJOR == 1 && OGRE_VERSION_MINOR < 11)
   rend->setMaterial(current_material_->getName());
+#else
+  rend->setMaterial(current_material_);
+#endif
   Ogre::Vector4 size(width_, height_, depth_, 0.0f);
   Ogre::Vector4 alpha(alpha_, 0.0f, 0.0f, 0.0f);
   Ogre::Vector4 highlight(0.0f, 0.0f, 0.0f, 0.0f);

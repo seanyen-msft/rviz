@@ -123,7 +123,7 @@ void ImageDisplay::onInitialize()
     Ogre::AxisAlignedBox aabInf;
     aabInf.setInfinite();
     screen_rect_->setBoundingBox(aabInf);
-    screen_rect_->setMaterial(material_->getName());
+    screen_rect_->setMaterial(material_);
     img_scene_node_->attachObject(screen_rect_);
   }
 

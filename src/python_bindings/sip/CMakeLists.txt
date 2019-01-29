@@ -37,7 +37,7 @@ set(rviz_sip_DEPENDENT_FILES
 )
 
 # maintain context for different named target
-set(rviz_sip_INCLUDE_DIRS ${rviz_INCLUDE_DIRS} "${PROJECT_SOURCE_DIR}/src" ${catkin_INCLUDE_DIRS} ${CATKIN_DEVEL_PREFIX}/include)
+set(rviz_sip_INCLUDE_DIRS ${rviz_INCLUDE_DIRS} "${PROJECT_SOURCE_DIR}/src" ${catkin_INCLUDE_DIRS} ${CATKIN_DEVEL_PREFIX}/include ${OGRE_OV_INCLUDE_DIRS})
 set(rviz_sip_LIBRARIES ${rviz_LIBRARIES} ${PROJECT_NAME} ${catkin_LIBRARIES} ${Boost_LIBRARIES} ${ASSIMP_LIBRARIES} ${OGRE_OV_LIBRARIES_ABS} yaml-cpp)
 set(rviz_sip_LIBRARY_DIRS ${rviz_LIBRARY_DIRS} ${ASSIMP_LIBRARY_DIRS} ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_LIB_DESTINATION})
 if (NOT WIN32)

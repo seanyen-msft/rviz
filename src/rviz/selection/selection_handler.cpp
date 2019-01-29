@@ -198,7 +198,15 @@ void SelectionHandler::createBox(const std::pair<CollObjectHandle, uint64_t>& ha
     box = it->second.second;
   }
 
-  box->setMaterial(material_name);
+  auto material = Ogre::MaterialManager::getSingleton().getByName(material_name);
+  if (!material)
+      OGRE_EXCEPT( Ogre::Exception::ERR_ITEM_NOT_FOUND, "Could not find material " + material_name,
+          "SimpleRenderable::setMaterial" );
+
+  // Won't load twice anyway
+  material->load();
+
+  box->setMaterial(material);
 
   box->setupBoundingBox(aabb);
   node->detachAllObjects();
