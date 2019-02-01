@@ -38,9 +38,6 @@
 #include <OgreSubEntity.h>
 #include <OgreMath.h>
 #include <OgreRenderWindow.h>
-#ifdef DELETE
-#undef DELETE
-#endif
 
 #include <ros/ros.h>
 #include <interactive_markers/tools.h>

@@ -9,7 +9,6 @@
 
 #include "wrench_visual.h"
 
-
 namespace rviz
 {
 

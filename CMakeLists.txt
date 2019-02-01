@@ -225,12 +225,6 @@ include_directories(src ${catkin_INCLUDE_DIRS})
 # include_directories(${GTK2_INCLUDE_DIRS})
 # include_directories(/usr/include/gdk-pixbuf-2.0)
 
-# OGRE 1.10 headers includes Windows.h which subsequently exposes macros conflicted to interactive_marker_client.h
-# Potentially this can be removed once moving to OGRE 1.11.
-if (WIN32)
-  add_definitions(/DNOGDI)
-endif()
-
 add_subdirectory(src)
 
 install(DIRECTORY ogre_media

@@ -47,9 +47,6 @@
 #include <OgreVector3.h>
 #include <OgreQuaternion.h>
 #include <OgreSharedPtr.h>
-#ifdef DELETE
-#undef DELETE
-#endif
 
 
 namespace Ogre
