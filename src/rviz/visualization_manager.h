@@ -34,11 +34,11 @@
 #include <deque>
 
 #include <ros/time.h>
-#include <rviz/rviz_export.h>
 
 #include "rviz/bit_allocator.h"
 #include "rviz/config.h"
 #include "rviz/display_context.h"
+#include "rviz/rviz_macros.h"
 
 class QKeyEvent;
 class QTimer;
@@ -98,7 +98,7 @@ class VisualizationManagerPrivate;
  * The "protected" members should probably all be "private", as
  * VisualizationManager is not intended to be subclassed.
  */
-class RVIZ_EXPORT VisualizationManager: public DisplayContext
+class RVIZ_DECL VisualizationManager: public DisplayContext
 {
 Q_OBJECT
 public:

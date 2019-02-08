@@ -30,7 +30,6 @@
 #define IMAGE_DISPLAY_BASE_H
 
 #include <QObject>
-#include <rviz/rviz_export.h>
 
 #ifndef Q_MOC_RUN  // See: https://bugreports.qt-project.org/browse/QTBUG-22829
 # include <message_filters/subscriber.h>
@@ -47,6 +46,7 @@
 # include "rviz/properties/int_property.h"
 
 # include "rviz/display.h"
+# include "rviz/rviz_macros.h"
 #endif
 
 namespace rviz
@@ -58,7 +58,7 @@ namespace rviz
  * it handles subscribing and unsubscribing when the display is
  * enabled or disabled.  */
 
-class RVIZ_EXPORT ImageDisplayBase : public Display
+class RVIZ_DECL ImageDisplayBase : public Display
 {
 Q_OBJECT
 public:

@@ -129,10 +129,6 @@ add_library(${PROJECT_NAME}
   ${ENV_CONFIG_FILE}
 )
 
-include(GenerateExportHeader)
-generate_export_header(${PROJECT_NAME} EXPORT_FILE_NAME ${CATKIN_DEVEL_PREFIX}/include/${PROJECT_NAME}/${PROJECT_NAME}_export.h)
-target_include_directories(${PROJECT_NAME} PUBLIC ${CATKIN_DEVEL_PREFIX}/include)
-
 if(NOT WIN32)
   set_target_properties(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
@@ -180,11 +176,6 @@ install(TARGETS ${PROJECT_NAME}
 )
 
 install(DIRECTORY ./
-  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-  FILES_MATCHING PATTERN "*.h")
-
-install(DIRECTORY
-  ${CATKIN_DEVEL_PREFIX}/include/${PROJECT_NAME}/
   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
   FILES_MATCHING PATTERN "*.h")
 

@@ -32,10 +32,10 @@
 #include <QList>
 #include <QObject>
 #include <QStringList>
-#include <rviz/rviz_export.h>
 
 #include "rviz/pluginlib_factory.h"
 #include "rviz/tool.h"
+#include "rviz/rviz_macros.h"
 
 class QKeyEvent;
 
@@ -45,7 +45,7 @@ class DisplayContext;
 class PropertyTreeModel;
 class RenderPanel;
 
-class RVIZ_EXPORT ToolManager: public QObject
+class RVIZ_DECL ToolManager: public QObject
 {
 Q_OBJECT
 public:

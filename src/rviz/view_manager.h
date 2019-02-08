@@ -32,10 +32,10 @@
 #include <QList>
 #include <QObject>
 #include <QStringList>
-#include <rviz/rviz_export.h>
 
 #include "rviz/pluginlib_factory.h"
 #include "rviz/view_controller.h"
+#include "rviz/rviz_macros.h"
 
 namespace Ogre
 {
@@ -50,7 +50,7 @@ class PropertyTreeModel;
 class ViewController;
 class ViewControllerContainer;
 
-class RVIZ_EXPORT ViewManager: public QObject
+class RVIZ_DECL ViewManager: public QObject
 {
 Q_OBJECT
 public:

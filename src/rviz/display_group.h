@@ -30,7 +30,7 @@
 #define DISPLAY_GROUP_H
 
 #include "display.h"
-#include <rviz/rviz_export.h>
+#include "rviz/rviz_macros.h"
 
 namespace rviz
 {
@@ -45,7 +45,7 @@ class DisplayFactory;
  * Property superclass stores the non-Display properties and this
  * class stores the Display objects in a separate list.  The
  * separation is enforced in addChild(). */
-class RVIZ_EXPORT DisplayGroup: public Display
+class RVIZ_DECL DisplayGroup: public Display
 {
 Q_OBJECT
 public:

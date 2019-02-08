@@ -7,7 +7,6 @@ if(NOT WIN32)
   set_target_properties(send_images PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(send_images ${catkin_LIBRARIES})
-target_include_directories(send_images PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests send_images)
 
 # This is a test utility which can publish different kinds of markers.
@@ -16,7 +15,6 @@ if(NOT WIN32)
   set_target_properties(marker_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(marker_test ${catkin_LIBRARIES})
-target_include_directories(marker_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 add_dependencies(tests marker_test)
 
@@ -26,7 +24,6 @@ if(NOT WIN32)
   set_target_properties(mesh_marker_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(mesh_marker_test ${catkin_LIBRARIES})
-target_include_directories(mesh_marker_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 add_dependencies(tests mesh_marker_test)
 
@@ -37,7 +34,6 @@ catkin_add_gtest(property_test
   ${MOC_MOCK_PROPERTY_CHANGE_RECEIVER}
 )
 target_link_libraries(property_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-target_include_directories(property_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 # TODO(wjwwood): Fix this test, it used to use a set of Mock classes, but
 #                has since undergone a lot of changes and it no longer works.
@@ -66,7 +62,6 @@ if(NOT WIN32)
   set_target_properties(rviz_logo_marker PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(rviz_logo_marker ${catkin_LIBRARIES})
-target_include_directories(rviz_logo_marker PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests rviz_logo_marker)
 
 # This is an example node which publishes different kinds of point clouds.
@@ -75,7 +70,6 @@ if(NOT WIN32)
   set_target_properties(cloud_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(cloud_test ${catkin_LIBRARIES})
-target_include_directories(cloud_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests cloud_test)
 
 # This is an example node which serves an interactive marker.
@@ -84,7 +78,6 @@ if(NOT WIN32)
   set_target_properties(interactive_marker_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(interactive_marker_test ${catkin_LIBRARIES})
-target_include_directories(interactive_marker_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests interactive_marker_test)
 
 # This is another example node that publishes images.
@@ -93,7 +86,6 @@ if(NOT WIN32)
   set_target_properties(image_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(image_test ${catkin_LIBRARIES})
-target_include_directories(image_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests image_test)
 
 # This is a node that sends lots of point clouds.
@@ -102,7 +94,6 @@ if(NOT WIN32)
   set_target_properties(send_lots_of_points PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(send_lots_of_points ${catkin_LIBRARIES})
-target_include_directories(send_lots_of_points  PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests send_lots_of_points)
 
 # Yet another example which sends point clouds.
@@ -111,7 +102,6 @@ if(NOT WIN32)
   set_target_properties(send_point_cloud_2 PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(send_point_cloud_2 ${catkin_LIBRARIES})
-target_include_directories(send_point_cloud_2 PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 add_dependencies(tests send_point_cloud_2)
 
@@ -121,7 +111,6 @@ if(NOT WIN32)
   set_target_properties(send_grid_cells PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(send_grid_cells ${catkin_LIBRARIES})
-target_include_directories(send_grid_cells PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 add_dependencies(tests send_grid_cells)
 
@@ -131,7 +120,6 @@ if(NOT WIN32)
   set_target_properties(render_panel_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(render_panel_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-target_include_directories(render_panel_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests render_panel_test)
 
 # This is an executable which uses the rviz new display diaglog interface.
@@ -140,7 +128,6 @@ if(NOT WIN32)
   set_target_properties(new_display_dialog_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(new_display_dialog_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-target_include_directories(new_display_dialog_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 add_dependencies(tests new_display_dialog_test)
 
@@ -150,7 +137,6 @@ if(NOT WIN32)
   set_target_properties(color_editor_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(color_editor_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-target_include_directories(color_editor_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 add_dependencies(tests color_editor_test)
 
@@ -162,7 +148,6 @@ catkin_add_gtest(property_with_ros_spinner_test
   ${MOC_MOCK_PROPERTY_CHANGE_RECEIVER}
 )
 target_link_libraries(property_with_ros_spinner_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-target_include_directories(property_with_ros_spinner_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests property_with_ros_spinner_test)
 
 # This is an executable that uses the line_edit_with_button property interface.
@@ -171,7 +156,6 @@ if(NOT WIN32)
   set_target_properties(line_edit_with_button_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(line_edit_with_button_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-target_include_directories(line_edit_with_button_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests line_edit_with_button_test)
 
 # This is an executable which tests the connect/disconnect behavior of signals and slots in Qt.
@@ -180,7 +164,6 @@ if(NOT WIN32)
   set_target_properties(connect_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(connect_test ${QT_LIBRARIES})
-target_include_directories(connect_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 add_dependencies(tests connect_test)
 
 # This is a GTest which tests the display configuration.
@@ -196,7 +179,6 @@ if(NOT WIN32)
   set_target_properties(render_points_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(render_points_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-target_include_directories(render_points_test PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 add_dependencies(tests render_points_test)
 
@@ -206,7 +188,6 @@ if(NOT WIN32)
   set_target_properties(two_render_widgets PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(two_render_widgets rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-target_include_directories(two_render_widgets PUBLIC ${CMAKE_BINARY_DIR}/rviz/src/rviz)
 
 add_dependencies(tests two_render_widgets)
 

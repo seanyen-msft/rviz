@@ -31,7 +31,7 @@
 #define OGRE_TOOLS_AXES_H
 
 #include "object.h"
-#include <rviz/rviz_export.h>
+#include "rviz/rviz_macros.h"
 
 #include <stddef.h>
 #include <stdint.h>
@@ -56,7 +56,7 @@ class Shape;
  * \class Axes
  * \brief An object that displays a set of X/Y/Z axes, with X=Red, Y=Green, Z=Blue
  */
-class RVIZ_EXPORT Axes : public Object
+class RVIZ_DECL Axes : public Object
 {
 public:
   /**

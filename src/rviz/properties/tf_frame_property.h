@@ -30,16 +30,16 @@
 #define TF_FRAME_PROPERTY_H
 
 #include <string>
-#include <rviz/rviz_export.h>
 
 #include "rviz/properties/editable_enum_property.h"
+#include "rviz/rviz_macros.h"
 
 namespace rviz
 {
 
 class FrameManager;
 
-class RVIZ_EXPORT TfFrameProperty: public EditableEnumProperty
+class RVIZ_DECL TfFrameProperty: public EditableEnumProperty
 {
 Q_OBJECT
 public:

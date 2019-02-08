@@ -32,9 +32,9 @@
 
 #include <OgreQuaternion.h>
 #include <OgreVector3.h>
-#include <rviz/rviz_export.h>
 
 #include "rviz/view_controller.h"
+#include "rviz/rviz_macros.h"
 
 namespace rviz
 {
@@ -43,7 +43,7 @@ class TfFrameProperty;
 
 /** @brief Base class of ViewControllers which have a "Target Frame"
  * which is a TF frame whose position they track. */
-class RVIZ_EXPORT FramePositionTrackingViewController: public ViewController
+class RVIZ_DECL FramePositionTrackingViewController: public ViewController
 {
 Q_OBJECT
 public:

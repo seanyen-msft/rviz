@@ -34,7 +34,6 @@
 
 #include <QMainWindow>
 #include <QList>
-#include <rviz/rviz_export.h>
 
 #include <string>
 #include <deque>
@@ -42,6 +41,7 @@
 #include "rviz/config.h"
 #include "rviz/window_manager_interface.h"
 #include "rviz/panel.h"
+#include "rviz/rviz_macros.h"
 
 #include <ros/time.h>
 
@@ -72,7 +72,7 @@ class WidgetGeometryChangeDetector;
  * the top is a toolbar with "Move Camera", "Select", etc.  There is
  * also a menu bar with file/open, etc.
  */
-class RVIZ_EXPORT VisualizationFrame : public QMainWindow, public WindowManagerInterface
+class RVIZ_DECL VisualizationFrame : public QMainWindow, public WindowManagerInterface
 {
 Q_OBJECT
 public:

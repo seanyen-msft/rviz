@@ -38,7 +38,8 @@
 
 #include <OgreRoot.h>
 #include <stdint.h>
-#include <rviz/rviz_export.h>
+
+#include "rviz/rviz_macros.h"
 
 #ifndef _WIN32
 # pragma GCC diagnostic pop
@@ -53,7 +54,7 @@ namespace Ogre
 namespace rviz
 {
 
-class RVIZ_EXPORT RenderSystem
+class RVIZ_DECL RenderSystem
 {
 public:
 
