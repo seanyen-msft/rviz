@@ -15,7 +15,6 @@ if(NOT WIN32)
   set_target_properties(marker_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(marker_test ${catkin_LIBRARIES})
-
 add_dependencies(tests marker_test)
 
 # This is a test utility which can publish different kinds of mesh markers.
@@ -24,7 +23,6 @@ if(NOT WIN32)
   set_target_properties(mesh_marker_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(mesh_marker_test ${catkin_LIBRARIES})
-
 add_dependencies(tests mesh_marker_test)
 
 # This is a GTest which tests the different types of primitive display properties.
@@ -102,7 +100,6 @@ if(NOT WIN32)
   set_target_properties(send_point_cloud_2 PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(send_point_cloud_2 ${catkin_LIBRARIES})
-
 add_dependencies(tests send_point_cloud_2)
 
 # This is a node which sends grid cells.
@@ -111,7 +108,6 @@ if(NOT WIN32)
   set_target_properties(send_grid_cells PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(send_grid_cells ${catkin_LIBRARIES})
-
 add_dependencies(tests send_grid_cells)
 
 # This is a test program that uses the rviz panel interface.
@@ -128,7 +124,6 @@ if(NOT WIN32)
   set_target_properties(new_display_dialog_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(new_display_dialog_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-
 add_dependencies(tests new_display_dialog_test)
 
 # This is an executable which uses the rviz color editor test.
@@ -137,7 +132,6 @@ if(NOT WIN32)
   set_target_properties(color_editor_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(color_editor_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-
 add_dependencies(tests color_editor_test)
 
 # This is a modified version of the property test.
@@ -179,7 +173,6 @@ if(NOT WIN32)
   set_target_properties(render_points_test PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(render_points_test rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-
 add_dependencies(tests render_points_test)
 
 # This is an example application which creates two ogre render windows.
@@ -188,7 +181,6 @@ if(NOT WIN32)
   set_target_properties(two_render_widgets PROPERTIES COMPILE_FLAGS "-std=c++11")
 endif()
 target_link_libraries(two_render_widgets rviz ${catkin_LIBRARIES} ${QT_LIBRARIES})
-
 add_dependencies(tests two_render_widgets)
 
 # This is a GTest which tests the STL loader
