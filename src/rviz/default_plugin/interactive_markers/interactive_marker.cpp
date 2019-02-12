@@ -327,7 +327,7 @@ void InteractiveMarker::updateReferencePose()
 #ifndef _WIN32
 # pragma GCC diagnostic pop
 #endif
-      if ( retval != tf::NO_ERRORS )
+      if ( retval != tf::NO_ERROR )
       {
         std::ostringstream s;
         s <<"Error getting time of latest transform between " << reference_frame_
