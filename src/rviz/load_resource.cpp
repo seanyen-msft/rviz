@@ -27,19 +27,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "load_resource.h"
 
+#include <boost/filesystem.hpp>
 #include <ros/package.h>
 #include <ros/ros.h>
 
 #include <QPixmapCache>
 #include <QPainter>
 
-#include "load_resource.h"
-
 namespace rviz
 {
 
-boost::filesystem::path getPackagePath(const QString& url )
+boost::filesystem::path getPath(const QString& url )
 {
   boost::filesystem::path path;
   std::string stdPath = url.toStdString();
@@ -78,7 +78,7 @@ QPixmap loadPixmap( QString url, bool fill_cache )
     return pixmap;
   }
 
-  boost::filesystem::path path = getPackagePath( url );
+  boost::filesystem::path path = getPath( url );
 
   // If something goes wrong here, we go on and store the empty pixmap,
   // so the error won't appear again anytime soon.
