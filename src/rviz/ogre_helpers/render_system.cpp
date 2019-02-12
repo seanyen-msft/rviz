@@ -369,9 +369,7 @@ Ogre::RenderWindow* RenderSystem::makeRenderWindow(
   Ogre::RenderWindow *window = NULL;
 
   params["externalWindowHandle"] = Ogre::StringConverter::toString(window_id);
-#if !defined(Q_OS_WIN)
   params["parentWindowHandle"] = Ogre::StringConverter::toString(window_id);
-#endif
 
   params["externalGLControl"] = true;
 
