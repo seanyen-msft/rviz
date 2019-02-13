@@ -33,7 +33,6 @@
 #include <QPixmap>
 #include <QCursor>
 #include <QString>
-#include <boost/filesystem.hpp>
 
 namespace rviz
 {
