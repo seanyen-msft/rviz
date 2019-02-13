@@ -39,7 +39,7 @@
 namespace rviz
 {
 
-boost::filesystem::path getPath(const QString& url )
+boost::filesystem::path getPath( QString url )
 {
   boost::filesystem::path path;
   std::string stdPath = url.toStdString();
