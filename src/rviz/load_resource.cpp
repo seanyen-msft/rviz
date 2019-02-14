@@ -42,6 +42,7 @@ namespace rviz
 boost::filesystem::path getPath( QString url )
 {
   boost::filesystem::path path;
+  std::string stdPath = url.toStdString();
 
   if ( url.indexOf("package://", 0, Qt::CaseInsensitive) == 0 )
   {
@@ -54,9 +55,10 @@ boost::filesystem::path getPath( QString url )
   {
     path = url.section('/',2).toStdString();
   }
-  else if (boost::filesystem::exists(path))
+  else if (boost::filesystem::exists(stdPath))
   {
     // On Windows, the path would be the file path without any protocol prefix (e.g., "c:\abc\def.rviz").
+    path = stdPath;
   }
   else
   {
